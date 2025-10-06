@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2025-10-06_16-59-34",
+            "content": "@@ -439,16 +439,17 @@\n        %0A\n+%0A\n print(%22P\n",
+            "lines": "20"
+        },
+        {
+            "label": "2025-10-06_17-05-27",
+            "content": "@@ -1,543 +1,95 @@\n-class Chinela:%0A    def __init__(self):%0A        self.__tamanho = 0%0A%0A    def getTamanho(self):%0A        return self.__tamanho%0A    %0A    def setTamanho(self, valor: int):%0A        if  self.__tamanho %3E= 20  and self.__tamanho %3C=50 and self.__tamanho %252 == 0:%0A            self.__tamanho = valor%0A    %0Achinela = Chinela ()%0A        %0Awhile chinela.getTamanho() == 0:%0A    print(%22Digite seu temanho de chinela%22)%0A    tamanho = int(input())%0A    chinela.setTamanho(tamanho)%0A            %0Aprint(%22Parabens, voce comprou uma chinela tamanho%22, chinela.getTamanho())\n+@@ -176,12 +176,10 @@%0A f 20%0A- %253E= %0A+%253C=%0A self%0A@@ -188,17 +188,16 @@%0A _tamanho%0A- %0A %253C=50 and%0A\n",
+            "lines": "9"
+        },
+        {
+            "label": "2025-10-06_17-09-44",
+            "content": "@@ -192,16 +192,17 @@\n o %3E= 20 \n+ \n and self\n@@ -280,29 +280,16 @@\n = valor%0A\n-            %0A\n     %0Achi\n",
+            "lines": "19"
+        },
+        {
+            "label": "2025-10-06_17-10-34",
+            "content": "@@ -175,44 +175,71 @@\n if  \n-valor %3E= 20 and valor %3C=50 and valor\n+self.__tamanho %3E= 20 and self.__tamanho %3C=50 and self.__tamanho\n  %252 \n",
+            "lines": "20"
+        },
+        {
+            "label": "2025-10-06_17-14-24",
+            "content": "class Chinela:\n    def __init__(self):\n        self.__tamanho = 0\n\n    def getTamanho(self):\n        return self.__tamanho\n    \n    def setTamanho(self, valor: int):\n        if  valor >= 20 and valor <=50 and valor %2 == 0:\n            self.__tamanho = valor\n            \n    \nchinela = Chinela ()\n        \nwhile chinela.getTamanho() == 0:\n    print(\"Digite seu temanho de chinela\")\n    tamanho = int(input())\n    chinela.setTamanho(tamanho)\n            \nprint(\"Parabens, voce comprou uma chinela tamanho\", chinela.getTamanho())",
+            "lines": "20"
+        }
+    ]
+}
