@@ -1,0 +1,44 @@
+{
+    "patches": [
+        {
+            "label": "2025-10-10_16-38-45",
+            "content": "@@ -1,509 +0,0 @@\n-class Relogio:%0A    def __init__(self, hora: int = 0, min: int = 0):%0A        self.__h = 0%0A        self.set_hora(hora)%0A        self.__m = min%0A        self.__s = 0%0A%0A    def set_hora(self, valor: int):%0A            if valor %3E 11 or valor %3C 0:%0A                print (%22hora errada%22)%0A                return%0A            self.__h = valor%0A    %0A    def get_hora(self):%0A        return self.__h%0A    %0A    def __str__(self):%0A        return f%22%7Bself.__h%7D:%7Bself.__m%7D:%7Bself.__s%7D%22%0A    %0Aagora = Relogio(min=55, hora=9)%0Aprint(agora)\n",
+            "lines": "0"
+        },
+        {
+            "label": "2025-10-12_23-46-59",
+            "content": "@@ -462,206 +462,48 @@\n    %0A\n-def main():%0A    hora = Relogio(0, 0, 0)%0A    while True:%0A        line: str = input()%0A        print(%22$%22 + line)%0A        args: list%5Bstr%5D = line.split()%0A        if args%5B0%5D == %22show%22:%0A            \n+agora = Relogio(min=55, hora=9)%0A\n print(\n-h\n+ag\n ora)\n",
+            "lines": "21"
+        },
+        {
+            "label": "2025-10-12_23-48-43",
+            "content": "@@ -664,12 +664,4 @@\n ora)\n-%0A%0Amain()\n",
+            "lines": "27"
+        },
+        {
+            "label": "2025-10-12_23-50-54",
+            "content": "@@ -1,9 +1,4 @@\n-    %0A\n clas\n@@ -7,19 +7,16 @@\n Relogio:\n-   \n %0A    def\n@@ -53,152 +53,41 @@\n  min\n-uto: int = 0, segundo: int = 0):%0A                    self.__h = 0%0A                    self.__m = 0%0A                    self.__s = 0%0A            \n+: int = 0):%0A        self.__h = 0%0A\n     \n@@ -122,247 +122,117 @@\n     \n-     \n-       self.set_minuto(minuto)%0A                    self.set_segundo(segundo)%0A%0A    def set_hora(self, valor: int):%0A        if 0 %3C= valor %3C= 23:%0A            self.__h = valor%0A%0A    def set_minuto(self, valor: int):%0A        if 0 %3C=\n+self.__m = min%0A        self.__s = 0%0A%0A    def set_hora(self, valor: int):%0A            if valor %3E 11 or\n  valor %3C\n = 59\n@@ -219,36 +219,34 @@\n  %3E 11 or valor %3C\n-= 59\n+ 0\n :%0A            se\n@@ -247,557 +247,143 @@\n     \n-self.__m = valor%0A%0A    def set_segundo(self, valor: int):%0A        if 0 %3C= valor %3C= 59:%0A            self.__s = valor%0A%0A    def get_hora(self):%0A        return self.__h%0A%0A    def get_minuto(self):%0A        return self.__m%0A%0A    def get_segundo(self):%0A        return self.__s%0A%0A    def nextSecond(self):%0A        self.__s += 1%0A        if self.__s %3E 59:%0A            self.__s = 0%0A            self.__m += 1%0A            if self.__m %3E 59:%0A                self.__m = 0%0A                self.__h += 1%0A                if self.__h %3E 23:%0A                    self.__h = 0%0A\n+    print (%22hora errada%22)%0A                return%0A            self.__h = valor%0A    %0A    def get_hora(self):%0A        return self.__h%0A    \n %0A   \n@@ -428,20 +428,16 @@\n self.__h\n-:02d\n %7D:%7Bself.\n@@ -439,20 +439,16 @@\n self.__m\n-:02d\n %7D:%7Bself.\n@@ -454,16 +454,15 @@\n .__s\n-:02d%7D%22%0A%0A\n+%7D%22%0A    \n %0Adef\n@@ -518,25 +518,8 @@\n ue:%0A\n-        try:%0A    \n     \n@@ -546,101 +546,8 @@\n t()%0A\n-        except EOFError:%0A            break  # Para evitar erro se o usu%C3%A1rio encerrar o input%0A\n     \n@@ -607,17 +607,16 @@\n split()%0A\n-%0A\n         \n@@ -665,300 +665,11 @@\n ra)%0A\n-        elif args%5B0%5D == %22set%22:%0A            h, m, s = int(args%5B1%5D), int(args%5B2%5D), int(args%5B3%5D)%0A            hora.set_hora(h)%0A            hora.set_minuto(m)%0A            hora.set_segundo(s)%0A        elif args%5B0%5D == %22next%22:%0A            hora.nextSecond()%0A        elif args%5B0%5D == %22end%22:%0A            break\n+%0Amain()\n",
+            "lines": "29"
+        },
+        {
+            "label": "2025-10-12_23-54-43",
+            "content": "@@ -1188,16 +1188,33 @@\n e True:%0A\n+        try:%0A    \n         \n@@ -1233,16 +1233,109 @@\n input()%0A\n+        except EOFError:%0A            break  # Para evitar erro se o usu%C3%A1rio encerrar o input%0A\n         \n@@ -1746,11 +1746,4 @@\n reak\n-%0Amain()\n",
+            "lines": "67"
+        },
+        {
+            "label": "2025-10-12_23-55-28",
+            "content": "@@ -417,63 +417,8 @@\n alor\n-%0A        else:%0A            print(%22fail: hora invalida%22)\n %0A%0A  \n@@ -514,65 +514,8 @@\n alor\n-%0A        else:%0A            print(%22fail: minuto invalido%22)\n %0A%0A  \n@@ -572,32 +572,32 @@\n %3C= valor %3C= 59:%0A\n+\n             self\n@@ -612,66 +612,8 @@\n alor\n-%0A        else:%0A            print(%22fail: segundo invalido%22)\n %0A%0A  \n",
+            "lines": "65"
+        },
+        {
+            "label": "2025-10-12_23-57-31",
+            "content": "@@ -12,17 +12,20 @@\n Relogio:\n+   \n %0A\n-\n     def \n@@ -90,16 +90,28 @@\n t = 0):%0A\n+            \n         \n@@ -123,32 +123,44 @@\n __h = 0%0A        \n+      \n+      \n self.__m = 0%0A   \n@@ -148,32 +148,44 @@\n    self.__m = 0%0A\n+            \n         self.__s\n@@ -181,32 +181,44 @@\n    self.__s = 0%0A\n+            \n         self.set\n@@ -229,32 +229,44 @@\n a(hora)%0A        \n+      \n+      \n self.set_minuto(\n@@ -273,16 +273,28 @@\n minuto)%0A\n+            \n         \n@@ -1329,26 +1329,33 @@\n a = Relogio(\n+0, 0, 0\n )%0A\n-\n     while Tr\n@@ -1506,17 +1506,16 @@\n t(hora)%0A\n-%0A\n         \n@@ -1696,226 +1696,8 @@\n (s)%0A\n-%0A        elif args%5B0%5D == %22init%22:%0A            h, m, s = int(args%5B1%5D), int(args%5B2%5D), int(args%5B3%5D)%0A            hora = Relogio()%0A            hora.set_hora(h)%0A            hora.set_minuto(m)%0A            hora.set_segundo(s)%0A%0A\n     \n@@ -1720,24 +1720,24 @@\n  == %22next%22:%0A\n+\n             \n@@ -1754,17 +1754,16 @@\n econd()%0A\n-%0A\n         \n",
+            "lines": "71"
+        },
+        {
+            "label": "2025-10-12_23-59-44",
+            "content": "    \nclass Relogio:\n    def __init__(self, hora: int = 0, minuto: int = 0, segundo: int = 0):\n        self.__h = 0\n        self.__m = 0\n        self.__s = 0\n        self.set_hora(hora)\n        self.set_minuto(minuto)\n        self.set_segundo(segundo)\n\n    def set_hora(self, valor: int):\n        if 0 <= valor <= 23:\n            self.__h = valor\n        else:\n            print(\"fail: hora invalida\")\n\n    def set_minuto(self, valor: int):\n        if 0 <= valor <= 59:\n            self.__m = valor\n        else:\n            print(\"fail: minuto invalido\")\n\n    def set_segundo(self, valor: int):\n        if 0 <= valor <= 59:\n            self.__s = valor\n        else:\n            print(\"fail: segundo invalido\")\n\n    def get_hora(self):\n        return self.__h\n\n    def get_minuto(self):\n        return self.__m\n\n    def get_segundo(self):\n        return self.__s\n\n    def nextSecond(self):\n        self.__s += 1\n        if self.__s > 59:\n            self.__s = 0\n            self.__m += 1\n            if self.__m > 59:\n                self.__m = 0\n                self.__h += 1\n                if self.__h > 23:\n                    self.__h = 0\n\n    def __str__(self):\n        return f\"{self.__h:02d}:{self.__m:02d}:{self.__s:02d}\"\n\n\ndef main():\n    hora = Relogio()\n    while True:\n        line: str = input()\n        print(\"$\" + line)\n        args: list[str] = line.split()\n\n        if args[0] == \"show\":\n            print(hora)\n\n        elif args[0] == \"set\":\n            h, m, s = int(args[1]), int(args[2]), int(args[3])\n            hora.set_hora(h)\n            hora.set_minuto(m)\n            hora.set_segundo(s)\n\n        elif args[0] == \"init\":\n            h, m, s = int(args[1]), int(args[2]), int(args[3])\n            hora = Relogio()\n            hora.set_hora(h)\n            hora.set_minuto(m)\n            hora.set_segundo(s)\n\n        elif args[0] == \"next\":\n            hora.nextSecond()\n\n        elif args[0] == \"end\":\n            break\nmain()",
+            "lines": "81"
+        }
+    ]
+}
