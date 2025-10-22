@@ -7,14 +7,15 @@ sources:
   filters: null
 - database: poo
   link: https://github.com/qxcodepoo/arcade/blob/master/Readme.md
-  cache_path: C:\Users\viana\poo-dd-cd-bloco-b-vianabrunn\myrep\.tko\cache\poo.md
-  cache_timestamp: '2025-10-12 23:35:41'
+  cache_path: /workspaces/poo-dd-cd-bloco-b-vianabrunn/myrep/.tko/cache/poo.md
+  cache_timestamp: '2025-10-22 13:18:53'
   filters:
   - acesso
   - simples
 expanded:
 - poo@campanha-principal
 - poo@bloco_b-modificadores-de-acesso
+- poo@bloco_b-agregação-simples
 tasks:
   poo@chinela: '{rate:100, human:s, alone:9, study:20}'
   poo@camisa: '{rate:100, alone:10, study:20}'
@@ -27,4 +28,4 @@ flags:
   graph: 1
   xray: 0
 lang: py
-selected: poo@relogio
+selected: poo@motouber

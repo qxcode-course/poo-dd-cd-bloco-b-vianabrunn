@@ -1,0 +1,69 @@
+{
+    "patches": [
+        {
+            "label": "2025-10-22_14-07-16",
+            "content": "@@ -733,16 +733,53 @@\n rista%7D'%0A\n+    %0A    def drive(self, valor: int):\n %0A%0A%0Adef m\n@@ -1118,16 +1118,18 @@\n geiro)%0A%0A\n+%0A%0A\n main()%0A%0A\n",
+            "lines": "54"
+        },
+        {
+            "label": "2025-10-22_14-07-48",
+            "content": "@@ -1053,16 +1053,41 @@\n int(moto\n+ + motorista + passageiro\n )%0A%0Amain(\n",
+            "lines": "51"
+        },
+        {
+            "label": "2025-10-22_14-07-58",
+            "content": "@@ -702,15 +702,8 @@\n n f'\n-Cost: $\n %7Bsel\n@@ -716,19 +716,9 @@\n sto%7D\n-, Driver: $\n+:\n %7Bsel\n@@ -735,41 +735,8 @@\n sta%7D\n-, Passenger: $%7Bself.__passageiro%7D\n '%0A%0A%0A\n",
+            "lines": "51"
+        },
+        {
+            "label": "2025-10-22_14-09-51",
+            "content": "@@ -327,16 +327,28 @@\n __(self,\n+ custo: int,\n  motoris\n@@ -404,17 +404,16 @@\n usto\n-: int = 0\n+ = custo\n %0A   \n@@ -818,13 +818,85 @@\n oto(\n-%22%22, %22\n+0, %22 %22, %22 %22)%0A    passageiro = Pessoa(%22 %22, %22 %22)%0A    motorista = Pessoa(%22 %22, %22 \n %22)%0A \n",
+            "lines": "51"
+        },
+        {
+            "label": "2025-10-22_14-12-32",
+            "content": "@@ -663,17 +663,17 @@\n __str__(\n-s\n+S\n elf):%0A  \n",
+            "lines": "49"
+        },
+        {
+            "label": "2025-10-22_14-12-41",
+            "content": "@@ -483,17 +483,17 @@\n _custo (\n-s\n+S\n elf):%0A  \n@@ -542,17 +542,17 @@\n orista (\n-s\n+S\n elf):%0A  \n@@ -606,17 +606,17 @@\n egeiro (\n-s\n+S\n elf):%0A  \n",
+            "lines": "49"
+        },
+        {
+            "label": "2025-10-22_14-12-54",
+            "content": "@@ -693,16 +693,17 @@\n f'Cost: \n+$\n %7Bself.__\n@@ -714,24 +714,25 @@\n o%7D, Driver: \n+$\n %7Bself.__moto\n@@ -750,16 +750,17 @@\n senger: \n+$\n %7Bself.__\n",
+            "lines": "49"
+        },
+        {
+            "label": "2025-10-22_14-13-04",
+            "content": "@@ -349,16 +349,8 @@\n ssoa\n- %7C None \n , pa\n@@ -369,15 +369,8 @@\n ssoa\n- %7C None\n ):%0A \n",
+            "lines": "49"
+        },
+        {
+            "label": "2025-10-22_14-13-45",
+            "content": "@@ -345,16 +345,24 @@\n : Pessoa\n+ %7C None \n , passag\n@@ -373,16 +373,23 @@\n : Pessoa\n+ %7C None\n ):%0A     \n@@ -1039,209 +1039,8 @@\n o)%0A%0A\n-        if args%5B0%5D == %22setDrive%22:%0A            nome = args%5B1%5D%0A            din = int(args%5B2%5D)%0A            moto = Moto()%0A            motorista = Pessoa(nome, din)%0A            moto = Moto(motorista)%0A%0A    %0A\n main\n",
+            "lines": "49"
+        },
+        {
+            "label": "2025-10-22_14-24-07",
+            "content": "@@ -1208,15 +1208,8 @@\n oto(\n-custo, \n moto\n@@ -1217,14 +1217,8 @@\n ista\n-, None\n )%0A%0A \n",
+            "lines": "57"
+        },
+        {
+            "label": "2025-10-22_14-24-28",
+            "content": "@@ -651,132 +651,8 @@\n ro%0A%0A\n-    def set_drive(self, motorista: Pessoa):%0A        if self.__motorista == None:%0A            self.__motorista = motorista%0A%0A%0A\n     \n@@ -770,17 +770,16 @@\n eiro%7D'%0A%0A\n-%0A\n %0A%0Adef ma\n@@ -1200,19 +1200,23 @@\n moto\n-.set_drive(\n+ = Moto(custo, \n moto\n@@ -1220,16 +1220,22 @@\n otorista\n+, None\n )%0A%0A    %0A\n",
+            "lines": "57"
+        },
+        {
+            "label": "2025-10-22_14-30-07",
+            "content": "@@ -1237,16 +1237,42 @@\n rgs%5B2%5D)%0A\n+            moto = Moto()%0A\n         \n",
+            "lines": "63"
+        },
+        {
+            "label": "2025-10-22_14-30-45",
+            "content": "class Pessoa:\n    def __init__(self, nome: str, dinheiro: int ):\n        self.__nome = nome\n        self.__din = dinheiro\n\n    def get_nome (self):\n        return self.__nome\n    \n    def get_din (self):\n        return self.__din\n\n    def __str__(Self):\n        return f'{self.__nome}:{self.__din}'\n\nclass Moto:\n    def __init__(self, motorista: Pessoa, passageiro: Pessoa):\n        self.__custo: int = 0\n        self.__motorista = None\n        self.__passageiro = None\n\n    def get_custo (self):\n        return self.__custo\n\n    def get_motorista (self):\n        return self.__motorista\n\n    def get_passegeiro (self):\n        return self.__passageiro\n\n    def set_drive(self, motorista: Pessoa):\n        if self.__motorista == None:\n            self.__motorista = motorista\n\n\n    def __str__(self):\n        return f'Cost: {self.__custo}, Driver: {self.__motorista}, Passenger: {self.__passageiro}'\n\n\n\n\ndef main():\n    moto = Moto(\"\", \"\")\n    while True:\n        line: str = input()\n        print(\"$\" + line)\n        args: list[str]= line.split()\n\n        if args[0] == \"end\":\n            break\n\n        if args[0] == \"show\":\n            print(moto)\n\n        if args[0] == \"setDrive\":\n            nome = args[1]\n            din = int(args[2])\n            motorista = Pessoa(nome, din)\n            moto.set_drive(motorista)\n\n    \nmain()\n\n",
+            "lines": "62"
+        }
+    ]
+}
