@@ -62,8 +62,28 @@
         },
         {
             "label": "2025-10-22_14-30-45",
-            "content": "class Pessoa:\n    def __init__(self, nome: str, dinheiro: int ):\n        self.__nome = nome\n        self.__din = dinheiro\n\n    def get_nome (self):\n        return self.__nome\n    \n    def get_din (self):\n        return self.__din\n\n    def __str__(Self):\n        return f'{self.__nome}:{self.__din}'\n\nclass Moto:\n    def __init__(self, motorista: Pessoa, passageiro: Pessoa):\n        self.__custo: int = 0\n        self.__motorista = None\n        self.__passageiro = None\n\n    def get_custo (self):\n        return self.__custo\n\n    def get_motorista (self):\n        return self.__motorista\n\n    def get_passegeiro (self):\n        return self.__passageiro\n\n    def set_drive(self, motorista: Pessoa):\n        if self.__motorista == None:\n            self.__motorista = motorista\n\n\n    def __str__(self):\n        return f'Cost: {self.__custo}, Driver: {self.__motorista}, Passenger: {self.__passageiro}'\n\n\n\n\ndef main():\n    moto = Moto(\"\", \"\")\n    while True:\n        line: str = input()\n        print(\"$\" + line)\n        args: list[str]= line.split()\n\n        if args[0] == \"end\":\n            break\n\n        if args[0] == \"show\":\n            print(moto)\n\n        if args[0] == \"setDrive\":\n            nome = args[1]\n            din = int(args[2])\n            motorista = Pessoa(nome, din)\n            moto.set_drive(motorista)\n\n    \nmain()\n\n",
+            "content": "@@ -773,71 +773,8 @@\n sta%0A\n-            return True%0A        else:%0A            return False%0A\n %0A%0A  \n",
             "lines": "62"
+        },
+        {
+            "label": "2025-10-22_14-32-41",
+            "content": "@@ -1346,34 +1346,8 @@\n in)%0A\n-            moto = Moto()%0A\n     \n",
+            "lines": "65"
+        },
+        {
+            "label": "2025-10-22_14-37-34",
+            "content": "@@ -1239,17 +1239,16 @@\n setDrive\n-r\n %22:%0A     \n@@ -1350,24 +1350,37 @@\n             \n+moto = Moto()\n %0A           \n",
+            "lines": "66"
+        },
+        {
+            "label": "2025-10-22_14-42-09",
+            "content": "@@ -232,33 +232,33 @@\n     def __str__(\n-s\n+S\n elf):%0A        re\n",
+            "lines": "66"
+        },
+        {
+            "label": "2025-10-22_14-42-45",
+            "content": "class Pessoa:\n    def __init__(self, nome: str, dinheiro: int ):\n        self.__nome = nome\n        self.__din = dinheiro\n\n    def get_nome (self):\n        return self.__nome\n    \n    def get_din (self):\n        return self.__din\n\n    def __str__(self):\n        return f'{self.__nome}:{self.__din}'\n\nclass Moto:\n    def __init__(self, motorista: Pessoa, passageiro: Pessoa):\n        self.__custo: int = 0\n        self.__motorista = None\n        self.__passageiro = None\n\n    def get_custo (self):\n        return self.__custo\n\n    def get_motorista (self):\n        return self.__motorista\n\n    def get_passegeiro (self):\n        return self.__passageiro\n\n    def set_drive(self, motorista: Pessoa):\n        if self.__motorista == None:\n            self.__motorista = motorista\n            return True\n        else:\n            return False\n\n\n    def __str__(self):\n        return f'Cost: {self.__custo}, Driver: {self.__motorista}, Passenger: {self.__passageiro}'\n\n\n\n\ndef main():\n    moto = Moto(\"\", \"\")\n    while True:\n        line: str = input()\n        print(\"$\" + line)\n        args: list[str]= line.split()\n\n        if args[0] == \"end\":\n            break\n\n        if args[0] == \"show\":\n            print(moto)\n\n        if args[0] == \"setDriver\":\n            nome = args[1]\n            din = int(args[2])\n            motorista = Pessoa(nome, din)\n            \n            moto.set_drive(motorista)\n\n    \nmain()\n\n",
+            "lines": "66"
         }
     ]
 }
