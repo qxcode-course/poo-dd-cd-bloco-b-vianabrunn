@@ -9,7 +9,6 @@ class Chinela:
         if  valor >= 20 and valor <=50 and valor %2 == 0:
             self.__tamanho = valor
             
-    
 chinela = Chinela ()
         
 while chinela.getTamanho() == 0:
