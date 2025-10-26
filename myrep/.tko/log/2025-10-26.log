@@ -33,3 +33,6 @@
 2025-10-26 02:50:36, MOVE, v:1, k:poo@motouber, mode:BACK
 2025-10-26 02:50:40, MOVE, v:1, k:poo@motoca, mode:PICK
 2025-10-26 02:50:41, EXEC, v:1, k:poo@motoca, mode:FULL, rate:100
+2025-10-26 02:54:00, MOVE, v:1, k:poo@motoca, mode:BACK
+2025-10-26 02:54:21, MOVE, v:1, k:poo@grafite, mode:DOWN
+2025-10-26 02:54:27, MOVE, v:1, k:poo@grafite, mode:PICK
