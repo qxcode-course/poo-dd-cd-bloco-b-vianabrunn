@@ -18,7 +18,6 @@ class Motoca:
         self.__time = time
         self.__pessoa = None
 
-
     
     def inserir(self, pessoa: Pessoa):
         if self.__pessoa != None:
@@ -123,3 +122,4 @@ def main():
 
 main()
 
+## o grafico ta assim pq eu tava fazendo no lugar errado e tive que copiar e colar aqui dps, dai meu processo se perdeu

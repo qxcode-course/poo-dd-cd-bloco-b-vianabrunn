@@ -30,3 +30,6 @@
 2025-10-26 02:30:03, EXEC, v:1, k:poo@motouber, mode:FULL, rate:75, size:120
 2025-10-26 02:33:51, EXEC, v:1, k:poo@motouber, mode:FULL, rate:75, size:123
 2025-10-26 02:34:41, EXEC, v:1, k:poo@motouber, mode:FULL, rate:100, size:124
+2025-10-26 02:50:36, MOVE, v:1, k:poo@motouber, mode:BACK
+2025-10-26 02:50:40, MOVE, v:1, k:poo@motoca, mode:PICK
+2025-10-26 02:50:41, EXEC, v:1, k:poo@motoca, mode:FULL, rate:100
