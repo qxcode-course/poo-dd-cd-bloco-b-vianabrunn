@@ -34,6 +34,9 @@ class Pencil:
         else:
             self.__grafite = grafite
 
+    def remove (self):
+        self.__grafite = None
+
 
     def __str__(self):
         if self.__grafite != None:
@@ -65,6 +68,8 @@ class main:
                 pencil.insert(grafite)
             else: 
                 print("fail: calibre incompativel")
+        if args[0] == "remove":
+            pencil.remove()
             
 
 
