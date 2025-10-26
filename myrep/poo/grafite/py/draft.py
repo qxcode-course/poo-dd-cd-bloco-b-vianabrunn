@@ -13,6 +13,19 @@ class Grafite:
     def get_dureza(self):
         return self.__dureza
 
+    def usoPorFolha(self):
+        if self.__dureza == "HB":
+            return 1
+        
+        if self.__dureza == "2B":
+            return 2
+        
+        if self.__dureza == "4B":
+            return 4
+
+        if self.__dureza == "6B":
+            return 6
+
 
 class Pencil:
     def __init__(self, calibre: float, grafite: Grafite | None):
@@ -25,21 +38,20 @@ class Pencil:
     def get_grafite(self): 
         return self.__grafite
 
-
-
     def insert (self, grafite: Grafite):
         if self.__grafite != None:
             print("fail: ja existe grafite")
             return
-        lif self.__calibre == grafite.get_calibreG():
-            self.__grafite = gerafite
+        elif self.__calibre == grafite.get_calibreG():
+            self.__grafite = grafite
 
         else: 
             print("fail: calibre incompativel")
 
+
     def remove (self):
         self.__grafite = None 
- 
+
 
 
     def __str__(self):
@@ -71,6 +83,8 @@ class main:
             pencil.insert(grafite)
         if args[0] == "remove":
             pencil.remove()
+        if args[0] == "write":
+            pencil.write()
             
 
 

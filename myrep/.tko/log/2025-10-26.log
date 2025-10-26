@@ -85,3 +85,28 @@
 2025-10-26 20:41:24, EXEC, v:1, k:poo@grafite, mode:FULL, rate:10, size:80
 2025-10-26 20:43:32, EXEC, v:1, k:poo@grafite, mode:FULL, rate:10, size:80
 2025-10-26 20:47:25, EXEC, v:1, k:poo@grafite, mode:FULL, rate:60, size:80
+2025-10-26 22:14:57, EXEC, v:1, k:poo@grafite, mode:FULL, rate:60, size:98
+2025-10-26 22:16:05, EXEC, v:1, k:poo@grafite, mode:FULL, rate:60, size:100
+2025-10-26 22:16:25, EXEC, v:1, k:poo@grafite, mode:FULL, rate:70, size:100
+2025-10-26 22:22:14, EXEC, v:1, k:poo@grafite, mode:FULL, rate:70, size:104
+2025-10-26 22:26:23, EXEC, v:1, k:poo@grafite, mode:FULL, rate:0, size:108
+2025-10-26 22:29:16, EXEC, v:1, k:poo@grafite, mode:FULL, rate:70, size:106
+2025-10-26 22:29:31, EXEC, v:1, k:poo@grafite, mode:FULL, rate:70, size:106
+2025-10-26 22:30:23, EXEC, v:1, k:poo@grafite, mode:FULL, rate:70, size:107
+2025-10-26 22:31:00, EXEC, v:1, k:poo@grafite, mode:FULL, rate:70, size:107
+2025-10-26 22:31:50, EXEC, v:1, k:poo@grafite, mode:FULL, rate:60, size:107
+2025-10-26 22:32:00, EXEC, v:1, k:poo@grafite, mode:FULL, rate:70, size:107
+2025-10-26 22:32:26, EXEC, v:1, k:poo@grafite, mode:FULL, rate:70, size:107
+2025-10-26 22:32:42, EXEC, v:1, k:poo@grafite, mode:FULL, rate:70, size:107
+2025-10-26 22:46:51, EXEC, v:1, k:poo@grafite, mode:FULL, rate:70, size:110
+2025-10-26 22:47:52, EXEC, v:1, k:poo@grafite, mode:FULL, rate:60, size:112
+2025-10-26 22:48:24, EXEC, v:1, k:poo@grafite, mode:FULL, rate:60, size:112
+2025-10-26 22:49:03, EXEC, v:1, k:poo@grafite, mode:FULL, rate:60, size:112
+2025-10-26 22:49:17, MOVE, v:1, k:poo@grafite, mode:PICK
+2025-10-26 22:49:21, EXEC, v:1, k:poo@grafite, mode:FULL, rate:60
+2025-10-26 22:49:25, EXEC, v:1, k:poo@grafite, mode:FULL, rate:60, size:112
+2025-10-26 22:49:29, EXEC, v:1, k:poo@grafite, mode:FULL, rate:60, size:112
+2025-10-26 22:49:37, EXEC, v:1, k:poo@grafite, mode:FULL, rate:60, size:112
+2025-10-26 22:49:44, EXEC, v:1, k:poo@grafite, mode:FULL, rate:60, size:112
+2025-10-26 22:58:35, EXEC, v:1, k:poo@grafite, mode:FULL, rate:60, size:112
+2025-10-26 22:58:57, EXEC, v:1, k:poo@grafite, mode:FULL, rate:60
