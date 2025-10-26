@@ -37,7 +37,7 @@ class Pencil:
 
     def __str__(self):
         if self.__grafite != None:
-            return f'calibre: {self.__calibre}, grafite: [{self.__grafite.get_calibreG()}:{self.__grafite.get_dureza()}:{self.__grafite.get_size()}] '
+            return f'calibre: {self.__calibre}, grafite: [{self.__grafite.get_calibreG()}:{self.__grafite.get_dureza()}:{self.__grafite.get_size()}]'
         else:
             return f'calibre: {self.__calibre}, grafite: null'
     
