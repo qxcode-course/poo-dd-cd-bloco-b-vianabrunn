@@ -5,13 +5,13 @@ class Grafite:
         self.__size = size
 
     def get_size(self):
-        self.__size = size
+        return self.__size
 
     def get_calibreG(self):
-        self.__calibreG = calibreG
+        return self.__calibreG 
 
     def get_dureza(self):
-        self.__dureza = dureza
+        return self.__dureza
 
 
 class Pencil:
@@ -20,20 +20,24 @@ class Pencil:
         self.__grafite = None
 
     def get_calibre(self):
-        self.__calibre = calibre
-    
-    def set_calibre(self, calibre: float):
-        self.__calibre = calibre
-
-    def get_calibre(self):
-        self.__calibre = calibe()
+        return self.__calibre
 
     def get_grafite(self):
-        self.__grafite = grafite
+        return self.__grafite
+
+
+
+    def insert (self, grafite: Grafite):
+        if self.__grafite != None:
+            print("fail: ja existe grafite")
+            return
+        else:
+            self.__grafite = grafite
+
 
     def __str__(self):
         if self.__grafite != None:
-            return f'calibre: {self.__calibre}, grafite: [{self.__calibre.get_calibreG()}:{self.__dureza.get_dureza()}:{self.__size.get_size()}] '
+            return f'calibre: {self.__calibre}, grafite: [{self.__grafite.get_calibreG()}:{self.__grafite.get_dureza()}:{self.__grafite.get_size()}] '
         else:
             return f'calibre: {self.__calibre}, grafite: null'
     
@@ -49,10 +53,20 @@ class main:
             break
         if args[0] == "init":
             calibre = float(args[1])
-            pencil.set_calibre(calibre)
-
+            pencil = Pencil(calibre, None)
         if args[0] == "show":
             print(pencil)
+        if args[0] == "insert":
+            calibre = float(args[1])
+            dureza = args[2]
+            size = int(args[3])
+            if calibre == pencil.get_calibre():
+                grafite = Grafite(calibre, dureza, size)
+                pencil.insert(grafite)
+            else: 
+                print("fail: calibre incompativel")
+            
+
 
 
 main()

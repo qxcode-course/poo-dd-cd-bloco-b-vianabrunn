@@ -62,8 +62,83 @@
         },
         {
             "label": "2025-10-26_18-31-57",
-            "content": "class Grafite:\n    def __init__(self, calibreG: float, dureza: str, size: int):\n        self.__calibreG = calibreG\n        self.__dureza = dureza\n        self.__size = size\n\n    def get_size(self):\n        self.__size = size\n\n    def get_calibreG(self):\n        self.__calibreG = calibreG\n\n    def get_dureza(self):\n        self.__dureza = dureza\n\n\nclass Pencil:\n    def __init__(self, calibre: float, grafite: Grafite | None):\n        self.__calibre = calibre\n        self.__grafite = None\n\n    def get_calibre(self):\n        self.__calibre = calibre\n    \n    def set_calibre(self, calibre: float):\n        self.__calibre = calibre\n\n    def get_calibre(self):\n        self.__calibre = calibe()\n\n    def get_grafite(self):\n        self.__grafite = grafite\n\n    def __str__(self):\n        if self.__grafite != None:\n            return f'calibre: {self.__calibre}, grafite: [{self.__calibre.get_calibreG()}:{self.__dureza.get_dureza()}:{self.__size.get_size()}] '\n        else:\n            return f'calibre: {self.__calibre}, grafite: null'\n    \n\nclass main:\n    pencil = Pencil(0.0, None)\n    grafite = Grafite(0.0, \" \", 0)\n    while True:\n        line = input()\n        print(\"$\"+ line)\n        args: list[str] = line.split()\n        if args[0] == \"end\":\n            break\n        if args[0] == \"init\":\n            calibre = float(args[1])\n            pencil.set_calibre(calibre)\n\n        if args[0] == \"show\":\n            print(pencil)\n\n\nmain()\n\n\n",
+            "content": "@@ -199,30 +199,30 @@\n         \n-return \n self.__\n+size = \n size%0A%0A  \n@@ -247,39 +247,32 @@\n (self):%0A        \n-return \n self.__calibreG \n@@ -271,16 +271,26 @@\n alibreG \n+= calibreG\n %0A%0A    de\n@@ -317,30 +317,32 @@\n         \n-return \n self.__\n+dureza = \n dureza%0A%0A\n@@ -512,39 +512,32 @@\n (self):%0A        \n-return \n self.__calibre%0A%0A\n@@ -538,166 +538,64 @@\n ibre\n-%0A%0A    def get_calibre(self):\n+ = calibre\n %0A    \n+%0A\n     \n-return self.__calibre%0A%0A    def get_grafite(self):%0A        return self.__grafite%0A%0A%0A%0A    def insert (self, grafite: Grafite\n+def set_calibre(self, calibre: float\n ):%0A \n@@ -605,237 +605,123 @@\n     \n-if \n self.__\n-grafit\n+calibr\n e \n-!\n = \n-None:%0A            print(%22fail: ja existe grafite%22)%0A            return%0A        elif self.__calibre != self.__calibreG.get_calibreG():%0A            print(%22fail: calibre incompativel%22)%0A        %0A        else:%0A    \n+calibre%0A%0A    def get_calibre(self):%0A        self.__calibre = calibe()%0A%0A    def get_grafite(self):%0A\n     \n@@ -727,30 +727,30 @@\n      self.__\n-calibr\n+grafit\n e = grafite%0A\n@@ -750,19 +750,16 @@\n rafite%0A%0A\n-%0A%0A%0A\n     def \n@@ -1373,16 +1373,17 @@\n alibre)%0A\n+%0A\n         \n",
             "lines": "60"
+        },
+        {
+            "label": "2025-10-26_18-43-48",
+            "content": "@@ -1576,25 +1576,28 @@\n ncil\n- = Pencil\n+.set_calibre\n (calibre\n , No\n@@ -1592,22 +1592,16 @@\n (calibre\n-, None\n )%0A      \n",
+            "lines": "71"
+        },
+        {
+            "label": "2025-10-26_18-45-08",
+            "content": "@@ -1657,227 +1657,8 @@\n il)%0A\n-        if args%5B0%5D == %22insert%22:%0A            calibre = float(args%5B1%5D)%0A            dureza = args%5B2%5D%0A            size = int(args%5B3%5D)%0A            grafite = Grafite(calibre, dureza, size)%0A            pencil.insert(grafite)%0A%0A\n %0A%0Ama\n",
+            "lines": "71"
+        },
+        {
+            "label": "2025-10-26_18-48-04",
+            "content": "@@ -832,16 +832,27 @@\n != self.\n+__calibreG.\n get_cali\n",
+            "lines": "78"
+        },
+        {
+            "label": "2025-10-26_18-48-39",
+            "content": "@@ -827,16 +827,21 @@\n ibre != \n+self.\n get_cali\n",
+            "lines": "78"
+        },
+        {
+            "label": "2025-10-26_18-48-52",
+            "content": "@@ -831,23 +831,8 @@\n  != \n-self.__grafite.\n get_\n",
+            "lines": "78"
+        },
+        {
+            "label": "2025-10-26_18-51-05",
+            "content": "@@ -944,30 +944,30 @@\n      self.__\n-grafit\n+calibr\n e = grafite%0A\n",
+            "lines": "78"
+        },
+        {
+            "label": "2025-10-26_19-13-39",
+            "content": "@@ -538,16 +538,74 @@\n alibre%0A%0A\n+    def get_calibre(self):%0A        return self.__calibre%0A%0A\n     def \n@@ -830,30 +830,30 @@\n e != self.__\n-calibr\n+grafit\n e.get_calibr\n",
+            "lines": "78"
+        },
+        {
+            "label": "2025-10-26_19-16-44",
+            "content": "@@ -783,17 +783,16 @@\n _calibre\n-G\n .get_cal\n",
+            "lines": "75"
+        },
+        {
+            "label": "2025-10-26_19-20-21",
+            "content": "@@ -776,23 +776,24 @@\n  self.__\n-grafite\n+calibreG\n .get_cal\n",
+            "lines": "75"
+        },
+        {
+            "label": "2025-10-26_19-20-58",
+            "content": "@@ -783,16 +783,29 @@\n _grafite\n+.get_calibreG\n ():%0A    \n",
+            "lines": "75"
+        },
+        {
+            "label": "2025-10-26_19-21-25",
+            "content": "@@ -779,24 +779,26 @@\n lf.__grafite\n+()\n :%0A          \n",
+            "lines": "75"
+        },
+        {
+            "label": "2025-10-26_19-21-40",
+            "content": "@@ -738,16 +738,120 @@\n  return%0A\n+        elif self.__calibre != self.__grafite:%0A            print(%22fail: calibre incompativel%22)%0A        %0A\n         \n@@ -1713,60 +1713,8 @@\n 3%5D)%0A\n-            if calibre == pencil.get_calibre():%0A    \n     \n@@ -1770,28 +1770,24 @@\n             \n-    \n pencil.inser\n@@ -1801,81 +1801,8 @@\n te)%0A\n-            else: %0A                print(%22%22fail: calibre incompativel%22%22)%0A\n %0A%0A%0Am\n",
+            "lines": "75"
+        },
+        {
+            "label": "2025-10-26_19-28-34",
+            "content": "@@ -1787,24 +1787,25 @@\n      print(%22\n+%22\n fail: calibr\n@@ -1819,16 +1819,17 @@\n pativel%22\n+%22\n )%0A%0A%0A%0Amai\n",
+            "lines": "75"
+        },
+        {
+            "label": "2025-10-26_19-28-44",
+            "content": "@@ -791,16 +791,18 @@\n afite%0A%0A%0A\n+%0A%0A\n     def \n@@ -913,30 +913,30 @@\n e: %5B%7Bself.__\n-grafit\n+calibr\n e.get_calibr\n@@ -945,31 +945,30 @@\n ()%7D:%7Bself.__\n-grafite\n+dureza\n .get_dureza(\n@@ -978,22 +978,19 @@\n %7Bself.__\n-grafit\n+siz\n e.get_si\n@@ -1824,21 +1824,8 @@\n l%22)%0A\n-            %0A\n %0A%0A%0Am\n",
+            "lines": "75"
+        },
+        {
+            "label": "2025-10-26_19-37-03",
+            "content": "class Grafite:\n    def __init__(self, calibreG: float, dureza: str, size: int):\n        self.__calibreG = calibreG\n        self.__dureza = dureza\n        self.__size = size\n\n    def get_size(self):\n        return self.__size\n\n    def get_calibreG(self):\n        return self.__calibreG \n\n    def get_dureza(self):\n        return self.__dureza\n\n\nclass Pencil:\n    def __init__(self, calibre: float, grafite: Grafite | None):\n        self.__calibre = calibre\n        self.__grafite = None\n\n    def get_calibre(self):\n        return self.__calibre\n\n    def get_grafite(self):\n        return self.__grafite\n\n\n\n    def insert (self, grafite: Grafite):\n        if self.__grafite != None:\n            print(\"fail: ja existe grafite\")\n            return\n        else:\n            self.__grafite = grafite\n\n\n    def __str__(self):\n        if self.__grafite != None:\n            return f'calibre: {self.__calibre}, grafite: [{self.__grafite.get_calibreG()}:{self.__grafite.get_dureza()}:{self.__grafite.get_size()}] '\n        else:\n            return f'calibre: {self.__calibre}, grafite: null'\n    \n\nclass main:\n    pencil = Pencil(0.0, None)\n    grafite = Grafite(0.0, \" \", 0)\n    while True:\n        line = input()\n        print(\"$\"+ line)\n        args: list[str] = line.split()\n        if args[0] == \"end\":\n            break\n        if args[0] == \"init\":\n            calibre = float(args[1])\n            pencil = Pencil(calibre, None)\n        if args[0] == \"show\":\n            print(pencil)\n        if args[0] == \"insert\":\n            calibre = float(args[1])\n            dureza = args[2]\n            size = int(args[3])\n            if calibre == pencil.get_calibre():\n                grafite = Grafite(calibre, dureza, size)\n                pencil.insert(grafite)\n            else: \n                print(\"fail: calibre incompativel\")\n            \n\n\n\nmain()\n\n\n",
+            "lines": "74"
         }
     ]
 }
