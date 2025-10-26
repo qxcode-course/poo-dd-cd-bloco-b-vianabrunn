@@ -17,12 +17,12 @@ class Grafite:
 class Pencil:
     def __init__(self, calibre: float, grafite: Grafite | None):
         self.__calibre = calibre
-        self.__grafite = None
+        self.__grafite = grafite
 
     def get_calibre(self):
         return self.__calibre
 
-    def get_grafite(self):
+    def get_grafite(self): 
         return self.__grafite
 
 
@@ -31,11 +31,15 @@ class Pencil:
         if self.__grafite != None:
             print("fail: ja existe grafite")
             return
-        else:
-            self.__grafite = grafite
+        lif self.__calibre == grafite.get_calibreG():
+            self.__grafite = gerafite
+
+        else: 
+            print("fail: calibre incompativel")
 
     def remove (self):
-        self.__grafite = None
+        self.__grafite = None 
+ 
 
 
     def __str__(self):
@@ -62,12 +66,9 @@ class main:
         if args[0] == "insert":
             calibre = float(args[1])
             dureza = args[2]
-            size = int(args[3])
-            if calibre == pencil.get_calibre():
-                grafite = Grafite(calibre, dureza, size)
-                pencil.insert(grafite)
-            else: 
-                print("fail: calibre incompativel")
+            size = int(args[3]) 
+            grafite = Grafite(calibre, dureza, size)
+            pencil.insert(grafite)
         if args[0] == "remove":
             pencil.remove()
             

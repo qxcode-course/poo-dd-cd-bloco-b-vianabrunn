@@ -157,8 +157,38 @@
         },
         {
             "label": "2025-10-26_19-46-34",
-            "content": "class Grafite:\n    def __init__(self, calibreG: float, dureza: str, size: int):\n        self.__calibreG = calibreG\n        self.__dureza = dureza\n        self.__size = size\n\n    def get_size(self):\n        return self.__size\n\n    def get_calibreG(self):\n        return self.__calibreG \n\n    def get_dureza(self):\n        return self.__dureza\n\n\nclass Pencil:\n    def __init__(self, calibre: float, grafite: Grafite | None):\n        self.__calibre = calibre\n        self.__grafite = None\n\n    def get_calibre(self):\n        return self.__calibre\n\n    def get_grafite(self):\n        return self.__grafite\n\n\n\n    def insert (self, grafite: Grafite):\n        if self.__grafite != None:\n            print(\"fail: ja existe grafite\")\n            return\n        else:\n            self.__grafite = grafite\n\n    def remove (self):\n        self.__grafite = None\n\n\n    def __str__(self):\n        if self.__grafite != None:\n            return f'calibre: {self.__calibre}, grafite: [{self.__grafite.get_calibreG()}:{self.__grafite.get_dureza()}:{self.__grafite.get_size()}]'\n        else:\n            return f'calibre: {self.__calibre}, grafite: null'\n    \n\nclass main:\n    pencil = Pencil(0.0, None)\n    grafite = Grafite(0.0, \" \", 0)\n    while True:\n        line = input()\n        print(\"$\"+ line)\n        args: list[str] = line.split()\n        if args[0] == \"end\":\n            break\n        if args[0] == \"init\":\n            calibre = float(args[1])\n            pencil = Pencil(calibre, None)\n        if args[0] == \"show\":\n            print(pencil)\n        if args[0] == \"insert\":\n            calibre = float(args[1])\n            dureza = args[2]\n            size = int(args[3])\n            if calibre == pencil.get_calibre():\n                grafite = Grafite(calibre, dureza, size)\n                pencil.insert(grafite)\n            else: \n                print(\"fail: calibre incompativel\")\n        if args[0] == \"remove\":\n            pencil.remove()\n            \n\n\n\nmain()\n\n\n",
+            "content": "@@ -71,13 +71,11 @@\n ze: \n-floar\n+int\n ):%0A \n@@ -340,157 +340,8 @@\n za%0A%0A\n-    def write (self):%0A        if self.__grafite == None:%0A            print(%22fail: nao existe grafite%22)%0A        elif self.__grafite.get_dureza == %22%22%0A%0A\n %0Acla\n@@ -842,17 +842,16 @@\n e = None\n- \n %0A%0A%0A    d\n",
             "lines": "79"
+        },
+        {
+            "label": "2025-10-26_19-52-01",
+            "content": "@@ -338,16 +338,165 @@\n dureza%0A%0A\n+    def write (self):%0A        if self.__grafite == None:%0A            print(%22fail: nao existe grafite%22)%0A        elif self.__grafite.get_dureza == %22%22%0A%0A\n %0Aclass P\n@@ -995,18 +995,16 @@\n = None %0A\n- %0A\n %0A%0A    de\n",
+            "lines": "84"
+        },
+        {
+            "label": "2025-10-26_19-58-05",
+            "content": "@@ -71,17 +71,17 @@\n ze: floa\n-t\n+r\n ):%0A     \n",
+            "lines": "80"
+        },
+        {
+            "label": "2025-10-26_19-58-15",
+            "content": "@@ -67,18 +67,20 @@\n , size: \n-in\n+floa\n t):%0A    \n@@ -566,17 +566,16 @@\n e(self):\n- \n %0A       \n@@ -754,58 +754,10 @@\n   el\n-if self.__calibre == self.__grafite.get_calibreG()\n+se\n :%0A  \n@@ -769,17 +769,17 @@\n      sel\n-g\n+f\n .__grafi\n@@ -796,72 +796,8 @@\n te%0A%0A\n-        else: %0A            print(%22fail: calibre incompativel%22)%0A%0A\n     \n@@ -1664,18 +1664,69 @@\n args%5B3%5D)\n- \n %0A\n+            if calibre == pencil.get_calibre():%0A    \n         \n@@ -1778,24 +1778,28 @@\n             \n+    \n pencil.inser\n@@ -1809,16 +1809,87 @@\n rafite)%0A\n+            else: %0A                print(%22fail: calibre incompativel%22)%0A\n         \n",
+            "lines": "80"
+        },
+        {
+            "label": "2025-10-26_20-41-24",
+            "content": "@@ -470,30 +470,27 @@\n __grafite = \n-grafit\n+Non\n e%0A%0A    def g\n",
+            "lines": "80"
+        },
+        {
+            "label": "2025-10-26_20-43-32",
+            "content": "@@ -773,16 +773,23 @@\n ibre == \n+self.__\n grafite.\n@@ -811,33 +811,33 @@\n %0A            sel\n-f\n+g\n .__grafite = gra\n",
+            "lines": "80"
+        },
+        {
+            "label": "2025-10-26_20-47-25",
+            "content": "class Grafite:\n    def __init__(self, calibreG: float, dureza: str, size: int):\n        self.__calibreG = calibreG\n        self.__dureza = dureza\n        self.__size = size\n\n    def get_size(self):\n        return self.__size\n\n    def get_calibreG(self):\n        return self.__calibreG \n\n    def get_dureza(self):\n        return self.__dureza\n\n\nclass Pencil:\n    def __init__(self, calibre: float, grafite: Grafite | None):\n        self.__calibre = calibre\n        self.__grafite = grafite\n\n    def get_calibre(self):\n        return self.__calibre\n\n    def get_grafite(self): \n        return self.__grafite\n\n\n\n    def insert (self, grafite: Grafite):\n        if self.__grafite != None:\n            print(\"fail: ja existe grafite\")\n            return\n        elif self.__calibre == grafite.get_calibreG():\n            self.__grafite = grafite\n\n        else: \n            print(\"fail: calibre incompativel\")\n\n    def remove (self):\n        self.__grafite = None \n \n\n\n    def __str__(self):\n        if self.__grafite != None:\n            return f'calibre: {self.__calibre}, grafite: [{self.__grafite.get_calibreG()}:{self.__grafite.get_dureza()}:{self.__grafite.get_size()}]'\n        else:\n            return f'calibre: {self.__calibre}, grafite: null'\n    \n\nclass main:\n    pencil = Pencil(0.0, None)\n    grafite = Grafite(0.0, \" \", 0)\n    while True:\n        line = input()\n        print(\"$\"+ line)\n        args: list[str] = line.split()\n        if args[0] == \"end\":\n            break\n        if args[0] == \"init\":\n            calibre = float(args[1])\n            pencil = Pencil(calibre, None)\n        if args[0] == \"show\":\n            print(pencil)\n        if args[0] == \"insert\":\n            calibre = float(args[1])\n            dureza = args[2]\n            size = int(args[3]) \n            grafite = Grafite(calibre, dureza, size)\n            pencil.insert(grafite)\n        if args[0] == \"remove\":\n            pencil.remove()\n            \n\n\n\nmain()\n\n\n",
+            "lines": "80"
         }
     ]
 }
