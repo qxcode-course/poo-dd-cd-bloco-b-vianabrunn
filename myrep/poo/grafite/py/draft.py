@@ -13,6 +13,9 @@ class Grafite:
     def get_dureza(self):
         return self.__dureza
 
+    def set_size (self, valor: int):
+        self.__size = valor
+
     def usoPorFolha(self):
         if self.__dureza == "HB":
             return 1
@@ -52,6 +55,24 @@ class Pencil:
     def remove (self):
         self.__grafite = None 
 
+    def write (self):
+        if self.__grafite == None:
+            print("fail: nao existe grafite")
+            return
+        elif self.__grafite.get_size() - 10 >= self.__grafite.usoPorFolha():
+            self.__grafite.set_size(self.__grafite.get_size() - self.__grafite.usoPorFolha())
+            return
+        
+        elif self.__grafite.get_size() - 10 != 0 and self.__grafite.get_size() - 10 != self.__grafite.usoPorFolha():
+            print("fail: folha incompleta")
+            self.__grafite.set_size(10)
+            return
+        
+        else:
+            print("fail: tamanho insuficiente")
+            return
+
+        
 
 
     def __str__(self):
